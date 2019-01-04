@@ -83,7 +83,9 @@ this to `simulate' READ-CHAR."
          ;; points, at least for Latin1
          (let ((char-code (read-byte stream eof-error-p eof-value)))
            (and char-code
-                (code-char char-code))))))
+                #-:genera (code-char char-code)
+		#+:genera (code-char (gethash char-code +external-to-internal-codepoints+
+					      char-code)))))))
 
 (defun unread-char* (char)
   "Were simulating UNREAD-CHAR by putting the character into

@@ -43,7 +43,11 @@
 
 (define-constant +crlf+
   (make-array 2 :element-type '(unsigned-byte 8)
-              :initial-contents (mapcar 'char-code '(#\Return #\Linefeed)))
+              :initial-contents #-:genera (mapcar 'char-code '(#\Return #\Linefeed))
+  				;; NOTE: Genera uses its own character set where
+				;; #\Return and #\Linefeed do not map to the standard
+				;; codepoints.  Explicitly list those codepoints here.
+				#+:genera '(#o15 #o12))
   "A 2-element array consisting of the character codes for a CRLF
 sequence.")
 
