@@ -1,4 +1,4 @@
-;;;; -*- Mode: LISP; Syntax: ANSI-COMMON-LISP; Package: CL-USER; Base: 10 -*-
+;;;; -*- Mode: LISP; Syntax: ANSI-COMMON-LISP; Base: 10 -*-
 
 (asdf:defsystem :chunga
   :serial t

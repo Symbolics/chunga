@@ -1,4 +1,4 @@
-;;;; -*- Mode: LISP; Syntax: ANSI-COMMON-LISP; Base: 10 -*-
+;;;; -*- Mode: LISP; Syntax: ANSI-COMMON-LISP; Package: CHUNGA; Base: 10 -*-
 
 (in-package :chunga)
 
